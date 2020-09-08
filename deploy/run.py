@@ -10,6 +10,8 @@ def check_events():
         print('The truth is out there.')
         p = subprocess.Popen(['/usr/local/bin/git', 'pull'],
             cwd='/Users/scott/repos/scott2b/fastdeploy')
+        p = subprocess.Popen(['/usr/local/bin/docker-compose', 'build'],
+            cwd='/Users/scott/repos/scott2b/fastdeploy')
         p = subprocess.Popen(['/usr/local/bin/docker-compose', 'restart'],
             cwd='/Users/scott/repos/scott2b/fastdeploy')
         os.remove('.events/deploy-event')
