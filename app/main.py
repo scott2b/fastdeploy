@@ -9,7 +9,7 @@ app = FastAPI()
 def read_root():
     with open('/usr/src/events/deploy-event', 'w') as f:
         f.write('')
-    return {"Hello": "World"}
+    return {"Hello": "World Test"}
 
 
 @app.get("/items/{item_id}")
