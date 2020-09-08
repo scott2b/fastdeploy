@@ -1,0 +1,27 @@
+version: '3'
+
+# The default docker-compose file for local development
+
+# Usage:
+#
+#  $ docker-compose build
+#  $ docker-compose up
+#
+#  Navigate to https://localhost
+#
+# See QUICKSTART.md for preliminaries before running this stack.
+
+# Runs the Flask development server. This stack is sufficient for most
+# development needs and so is the default docker-compose option.
+
+services:
+
+  app:
+    restart: always
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file: .env
+    volumes:
+      - .events:/usr/src/events
