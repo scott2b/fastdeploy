@@ -7,8 +7,8 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    with open('/usr/src/events/deploy-event', 'w') as f:
-        f.write('')
+    #with open('/usr/src/events/deploy-event', 'w') as f:
+    #    f.write('')
     return {"Hello": "World"}
 
 
